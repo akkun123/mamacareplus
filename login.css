@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Monserrat', sans-serif;
+    overflow: hidden; /* Mencegah scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-image img {
+    width: 90%;
+    height: auto;
+}
+
+/* Kotak di tengah halaman */
+.center-box {
+    width: 80%; /* Sesuaikan ukuran sesuai keinginan */
+    height: 90%; /* Sesuaikan ukuran sesuai keinginan */
+    background-color: rgba(255, 255, 255, 0.9); /* Warna putih transparan */
+    border-radius: 10px; /* Sudut yang melengkung */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek 3D */
+    position: absolute; /* Pastikan berada di atas gambar */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Menempatkan kotak tepat di tengah layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Memastikan kotak ini berada di depan elemen lainnya */
+    background-image: url(images/Frame\ Form\ Login.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.center-box img {
+    width: 100%;
+    height: 120%;
+    border-radius: 10px; /* Agar sudut gambar mengikuti bentuk kotak */
+}
+
+.bottom-image img {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 1; /* Menjaga agar gambar latar bawah tetap berada di belakang */
+}
+
+.center-box .logo {
+    background-image: url(/images/Logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px; /* Nilai ini bisa disesuaikan untuk menaikkan logo lebih ke atas */
+    left: 10px; /* Sesuaikan posisi horizontal jika diperlukan */
+    width: 190px; /* Sesuaikan ukuran logo jika perlu */
+    height: 10%;
+    z-index: 11; /* Pastikan logo berada di depan gambar lainnya */
+}
+
+/* Style untuk menu login dan register */
+.menu {
+    position: absolute;
+    top: 30px; /* Mengurangi nilai top untuk memindahkan menu lebih ke atas */
+    right: 100px; /* Posisi dari sisi kanan */
+    z-index: 12;
+    display: flex;
+    gap: 100px; /* Menyesuaikan jarak antar menu */
+}
+
+
+/* Style untuk tombol Login */
+.login-btn {
+    background-color: transparent; /* Hilangkan background */
+    color: #06D001; /* Warna hijau sesuai permintaan */
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 15px;
+    font-weight: bold; /* Teks tebal */
+    border-radius: 15px; /* Radius agar tombol bulat */
+    box-shadow: none; /* Hilangkan bayangan */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    color: #04b701; /* Hijau sedikit lebih gelap saat hover */
+    transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+
+/* Style untuk teks Register */
+.register-btn {
+    background-color: transparent; /* Hilangkan background */
+    color: #7985CB; /* Warna biru sesuai permintaan */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold; /* Teks tebal */
+    padding: 5px 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.register-btn:hover {
+    color: #6774b7; /* Biru lebih gelap saat hover */
+    transform: scale(1.05); /* Efek pembesaran saat hover */
+}
+
+/* Style untuk teks Welcome di sebelah kanan menu */
+.welcome-text {
+    color: #06D001; /* Warna hijau terang */
+    font-size: 48px; /* Ukuran font besar */
+    font-weight: bold; /* Teks tebal */
+    text-align: left; /* Teks rata kiri */
+    position: absolute;
+    top: 140px; /* Jarak dari atas kotak */
+    right: 145px; /* Tempatkan di sebelah kanan */
+    z-index: 11; /* Memastikan teks berada di atas elemen lainnya */
+}
+
+/* Style untuk teks "Please type your account info!" */
+.account-info-text {
+    color: #B4BAE0; /* Warna hitam */
+    font-size: 20px; /* Ukuran font lebih kecil dari Welcome */
+    font-weight: normal; /* Teks biasa */
+    text-align: left; /* Rata kiri */
+    position: absolute;
+    top: 200px; /* Jarak dari atas kotak, tepat di bawah Welcome */
+    right: 85px; /* Sejajar dengan teks Welcome */
+    z-index: 11; /* Pastikan berada di atas elemen lainnya */
+}
+
+/* Style untuk label Username */
+.username-label {
+    color: #7985CB; /* Warna biru sesuai gambar */
+    font-size: 18px;
+    font-weight: bold; /* Teks tebal */
+    position: absolute;
+    top: 270px; /* Tepat di bawah teks "Please type your account info!" */
+    right: 260px; /* Sejajar dengan teks di atasnya */
+    z-index: 11;
+}
+
+/* Efek saat input fokus */
+.username-input:focus {
+    border-color: #06D001; /* Ganti warna border saat input fokus */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan lebih tebal saat fokus */
+}
+
+/* Style untuk input username dengan ikon sebagai background */
+.username-input {
+    width: 300px; /* Sesuaikan lebar input */
+    height: 40px; /* Sesuaikan tinggi input */
+    padding: 10px 10px 10px 40px; /* Menambahkan padding kiri untuk ruang ikon */
+    font-size: 16px; /* Ukuran teks */
+    color: #333; /* Warna teks */
+    background-color: #F5F7FA; /* Warna latar input */
+    border: 2px solid #7985CB; /* Border biru */
+    border-radius: 10px; /* Sudut membulat */
+    outline: none; /* Hilangkan outline saat fokus */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan halus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animasi saat fokus */
+    
+    /* Tambahkan ikon sebagai background di dalam input */
+    background-image: url('images/User.png'); /* Ganti dengan path ikon */
+    background-repeat: no-repeat; /* Agar ikon tidak berulang */
+    background-position: 10px center; /* Tempatkan ikon 10px dari kiri, di tengah secara vertikal */
+    background-size: 20px 20px; /* Sesuaikan ukuran ikon */
+    position: absolute;
+    top: 300px; /* Letakkan di bawah label username */
+    right: 60px; /* Sejajar dengan elemen di atasnya */
+    z-index: 11; /* Pastikan berada di atas gambar lain */
+}
+
+/* Style untuk label Username */
+.password-label {
+    color: #7985CB; /* Warna biru sesuai gambar */
+    font-size: 18px;
+    font-weight: bold; /* Teks tebal */
+    position: absolute;
+    top: 370px; /* Tepat di bawah teks "Please type your account info!" */
+    right: 260px; /* Sejajar dengan teks di atasnya */
+    z-index: 11;
+}
+
+/* Efek saat input fokus */
+.password-input:focus {
+    border-color: #06D001; /* Ganti warna border saat input fokus */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan lebih tebal saat fokus */
+}
+
+/* Style untuk input username dengan ikon sebagai background */
+.password-input {
+    width: 300px; /* Sesuaikan lebar input */
+    height: 40px; /* Sesuaikan tinggi input */
+    padding: 10px 10px 10px 40px; /* Menambahkan padding kiri untuk ruang ikon */
+    font-size: 16px; /* Ukuran teks */
+    color: #333; /* Warna teks */
+    background-color: #F5F7FA; /* Warna latar input */
+    border: 2px solid #7985CB; /* Border biru */
+    border-radius: 10px; /* Sudut membulat */
+    outline: none; /* Hilangkan outline saat fokus */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan halus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animasi saat fokus */
+    
+    /* Tambahkan ikon sebagai background di dalam input */
+    background-image: url('images/User.png'); /* Ganti dengan path ikon */
+    background-repeat: no-repeat; /* Agar ikon tidak berulang */
+    background-position: 10px center; /* Tempatkan ikon 10px dari kiri, di tengah secara vertikal */
+    background-size: 20px 20px; /* Sesuaikan ukuran ikon */
+    position: absolute;
+    top: 400px; /* Letakkan di bawah label username */
+    right: 60px; /* Sejajar dengan elemen di atasnya */
+    z-index: 11; /* Pastikan berada di atas gambar lain */
+}

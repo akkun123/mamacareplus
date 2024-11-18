@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MamaCare+</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/script.js"></script>
+    </head>
+
+    <body id="home">
+        <!-- Header -->
+        <header class="header" id="navbar">
+        <div class="logo">
+            <img src="images/MamaCare+ Logo 1.png" alt="MamaCare+ Logo">
+            <h1>Mama<span style="color: #F3FF90;">Care</span>+</h1>
+        </div>
+        <nav class="nav-icons">
+            <a href="#home"><img src="images/Icon Home - Landing Page.png" alt="Home"></a>
+            <a href="#tentang-mamacare"><img src="images/Icon About - Landing Page.png" alt="About"></a>
+            <a href="#artikel-seputar-ibu-anak"><img src="images/Icon Article - Landing Page.png" alt="Article"></a>
+            <a href="#faq-section"><img src="images/Icon FAQ - Landing Page.png" alt="FAQ"></a>
+            <button class="btn-get-started">Get Started</button>
+        </nav>
+        </header>
+        
+
+        <!-- Hero Section -->
+        <section class="hero" >
+            <div class="hero-content">
+            <h1>MamaCare<span>+</span></h1>
+            <p>INOVASI DIGITAL UNTUK PERAWATAN KEHAMILAN,</p>
+            <p>IBU, DAN ANAK YANG OPTIMAL</p>
+            <button class="btn-get-started">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Search Bar -->
+        <div class="search-bar-wrapper">
+            <div class="search-bar">
+            <button class="menu-icon">
+                <img src="images/container.png" alt="Menu">
+            </button>
+            <input type="text" placeholder="Search">
+            <button class="search-icon">
+                <img src="images/Trailing-Elements.png" alt="Search">
+            </button>
+            </div>
+        </div>
+
+        <!-- Tentang Section -->
+        <section class="about" id="tentang-mamacare">
+            <div class="separator"></div>
+            <h2>Tentang MamaCare<span>+</span></h2>
+            <p>
+            Aplikasi MamaCare+ adalah solusi digital yang dirancang untuk membantu ibu hamil dan orang tua 
+            dalam menjaga kesehatan ibu dan anak secara optimal. Aplikasi ini berfokus pada penyediaan layanan 
+            kesehatan berbasis website yang memungkinkan penggunanya untuk memantau perkembangan kesehatan 
+            selama kehamilan, mendapatkan informasi nutrisi yang tepat, dan menerima pengingat otomatis untuk 
+            kontrol kesehatan serta imunisasi.
+            </p>
+        </section>
+
+        <!-- Artikel Section -->
+        <section class="artikel" id="artikel-seputar-ibu-anak">
+            <br>
+            <h2>Artikel Seputar Ibu dan Anak</h2>
+            <div class="artikel-container">
+                <!-- Set Artikel Pertama -->
+                <div class="artikel-slide active-slide">
+                    <div class="artikel-item">
+                        <img src="images/Artikel 1.png" alt="Artikel 1">
+                        <div class="overlay">
+                            <p>KUNCI UNTUK KEHAMILAN YANG SEHAT</p>
+                            <div class="green-overlay">
+                                <a href="#" class="btn-article">Selengkapnya →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artikel-item">
+                        <img src="images/Artikel 2.png" alt="Artikel 2">
+                        <div class="overlay">
+                            <p>MENGATASI KONTRAKSI DI AKHIR KEHAMILAN</p>
+                            <div class="green-overlay">
+                                <a href="#" class="btn-article">Selengkapnya →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artikel-item">
+                        <img src="images/Artikel 3.png" alt="Artikel 3">
+                        <div class="overlay">
+                            <p>MEMBANGUN KEBIASAAN MAKAN SEHAT PADA ANAK SEJAK DINI</p>
+                            <div class="green-overlay">
+                                <a href="#" class="btn-article">Selengkapnya →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Set Artikel Kedua -->
+                <div class="artikel-slide">
+                    <div class="artikel-item">
+                        <img src="images/Artikel 4.png" alt="Artikel 4">
+                        <div class="overlay">
+                            <p>JUDUL ARTIKEL 4</p>
+                            <div class="green-overlay">
+                                <a href="#" class="btn-article">Selengkapnya →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artikel-item">
+                        <img src="images/Artikel 5.png" alt="Artikel 5">
+                        <div class="overlay">
+                            <p>JUDUL ARTIKEL 5</p>
+                            <div class="green-overlay">
+                                <a href="#" class="btn-article">Selengkapnya →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artikel-item">
+                        <img src="images/Artikel 6.png" alt="Artikel 6">
+                        <div class="overlay">
+                            <p>JUDUL ARTIKEL 6</p>
+                            <div class="green-overlay">
+                                <a href="#" class="btn-article">Selengkapnya →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+            <!-- Navigasi Titik -->
+            <div class="dot-navigation">
+                <span class="dot active-dot" onclick="showSlide(0)"></span>
+                <span class="dot" onclick="showSlide(1)"></span>
+            </div>
+        </section>
+
+        <button class="btn-selengkapnya">
+            <img src="images/Button Selengkapnya.png" alt="Selengkapnya">
+        </button>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq-section">
+            <h2>FAQ</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Siapa yang dapat menggunakan aplikasi MamaCare+?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aplikasi ini dirancang untuk ibu hamil dan orang tua yang ingin memantau kesehatan kehamilan dan anak secara optimal.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Bagaimana cara menggunakan aplikasi MamaCare+?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Kamu dapat mengunduh aplikasi dari website kami dan mengikuti panduan yang ada di dalam aplikasi untuk memulai.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Apakah saya akan mendapatkan pengingat untuk jadwal kontrol kehamilan dan imunisasi anak saya?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ya, MamaCare+ memberikan pengingat otomatis untuk jadwal kontrol kehamilan, imunisasi, dan pemeriksaan anak.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Apakah informasi kesehatan saya aman di MamaCare+?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Informasi kesehatan Anda dijaga dengan ketat menggunakan enkripsi standar industri sehingga tetap aman dan privasi Anda terjamin.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Bagaimana cara menghubungi tim dukungan jika saya mengalami masalah dengan aplikasi?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Anda dapat menghubungi tim dukungan kami melalui email atau media sosial yang tertera di bagian bawah website.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="images/MamaCare+ Logo 1.png" alt="MamaCare+ Logo">
+                    <h1>Mama<span style="color: #F3FF90;">Care</span>+</h1>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Tentang kami</h3>
+                    <a href="#">About Developers</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/Instagram.png" alt="Instagram" class="social-icon">
+                    @mamacareplus
+                </a>
+                <a href="mailto:mamacareplus@gmail.com" target="_blank">
+                    <img src="images/Mail.png" alt="Email" class="social-icon">
+                    mamacareplus@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-info">
+                <p>@ Kelompok 5 MamaCare+ Proyek 1 - D4 RPL 2C</p>
+            </div>
+        </footer>
+    </body>
+</html>

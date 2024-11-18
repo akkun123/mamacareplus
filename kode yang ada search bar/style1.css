@@ -1,0 +1,526 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* Body Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+    min-height: 100vh; /* Menutupi layar penuh */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Jika Anda ingin tetap bisa scrolling tapi tanpa scrollbar */
+body::-webkit-scrollbar {
+    width: 0; /* Scrollbar dihilangkan */
+    height: 0; /* Untuk horizontal scrollbar */
+}
+
+/* Sticky Header dengan Warna Transparan */
+.header {
+    background-color: #9BEC00; /* Warna hijau default */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+    position: sticky; /* Sticky behavior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Transisi halus saat warna berubah */
+}
+
+/* Navbar Saat Scroll (Blur dan Transparan) */
+.header.transparent {
+    background-color: rgba(44, 42, 42, 0.3); /* Hijau dengan transparansi */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.nav-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Tombol Get Started di Header */
+.btn-get-started {
+    background-color: #00b300; /* Hijau cerah sesuai gambar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Membuat sudut bulat */
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi saat hover */
+}
+
+/* Efek Hover */
+.btn-get-started:hover {
+    background-color: #009900; /* Warna lebih gelap saat di-hover */
+    transform: scale(1.05); /* Membesar sedikit saat hover */
+}
+
+/* Hero Section Styling */
+.hero {
+    background-image: url('/images/image\ 2.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 75vh; /* Dikurangi agar muat di layar */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 100%;
+    color: #F5F5F5;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Membuat teks kapital */
+}
+
+.hero-content .btn-get-started {
+    background-color: #9BEC00;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px; /* Jarak untuk berada di bawah teks */
+}
+
+/* Search Bar Styling */
+.search-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: -75px 0 0px; /* Posisi lebih rapat ke hero */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    max-width: 100%;
+    background-color: white;
+    border: 2px solid #9BEC00;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(155, 236, 0, 0.5);
+}
+
+.menu-icon {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #9BEC00;
+}
+
+.search-icon {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* About Section Styling */
+.about {
+    padding: 30px 20px; /* Sesuaikan padding agar muat di layar */
+    text-align: center;
+    flex: 1; /* Ambil sisa ruang */
+    margin-bottom: 180px;
+}
+
+/* Garis separator di atas Tulisan Tentang MamaCare */
+.separator {
+    width: 300px; /* Memperpanjang garis */
+    height: 9px; /* Menebalkan garis */
+    background-color: #9BEC00; /* Warna hijau */
+    margin: 0 auto 20px; /* Agar tetap di tengah */
+    border-radius: 25px;
+}
+
+.about h2 {
+    color: #1E1E1E;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1E1E1E;
+}
+
+/* Artikel Section Styling */
+.artikel {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 200px;
+    margin-bottom: 10px;
+}
+
+.artikel h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #1E1E1E;
+    margin-bottom: 20px;
+}
+
+.artikel-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.artikel-slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Menambah animasi transisi */
+}
+
+.active-slide {
+    display: flex;
+    opacity: 5; /* Pastikan slide aktif ditampilkan penuh */
+}
+
+.dot-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    transition: fade;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: #9BEC00; /* Warna hijau untuk titik aktif */
+}
+
+.artikel-item {
+    position: relative;
+    max-width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.artikel-item img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.artikel-item:hover img {
+    transform: scale(1.1); /* Efek zoom pada gambar */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding-bottom: 40px; /* Jarak untuk memberi ruang bagi overlay hijau */
+}
+
+.artikel-item:hover .overlay {
+    opacity: 1; /* Muncul overlay saat hover */
+}
+
+.overlay p {
+    font-size: 16px; /* Sesuaikan ukuran font */
+    font-weight: 600; /* Atur ketebalan teks jika diperlukan */
+    margin: 0;
+    padding: 0 10px; /* Tambahkan padding untuk lebih rapi */
+    line-height: 1.3; /* Sesuaikan line-height jika teks terdiri dari beberapa baris */
+}
+
+.green-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #9BEC00;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.btn-article {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+  /* Tombol Selengkapnya */
+.btn-selengkapnya {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* Untuk membuatnya berada di tengah */
+    transition: transform 0.3s ease;
+}
+
+.btn-selengkapnya img {
+    width: 150px; /* Sesuaikan ukuran tombol sesuai kebutuhan */
+}
+
+.btn-selengkapnya:hover {
+    transform: scale(1.05); /* Efek zoom saat dihover */
+}
+
+/* FAQ Section */
+.faq {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.faq h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #1E1E1E;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9ff;
+    transition: background-color 0.3s ease; /* Transisi halus untuk perubahan warna */
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1E1E1E;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #eee;
+}
+
+.faq-icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px;
+    font-size: 16px;
+    color: #666;
+    max-height: 0; /* Atur tinggi awal menjadi 0 */
+    overflow: hidden; /* Sembunyikan konten yang melampaui batas */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out; /* Gabungkan transisi */
+    padding: 0 20px; /* Padding di sisi, tapi tidak untuk atas-bawah awalnya */
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    max-height: 200px; /* Tentukan tinggi maksimum, sesuaikan jika perlu */
+    padding: 20px; /* Tambahkan padding saat dibuka */
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Tambahkan transisi untuk opacity */
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg); /* Ikon berubah arah saat dibuka */
+    
+}
+
+/* Footer Section Styling */
+.footer {
+    background-color: #9BEC00; /* Warna hijau terang */
+    padding: 40px 20px;
+    color: white;
+    width: 100vw; /* Lebar penuh viewport */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.footer-logo h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.footer-links {
+    text-align: right;
+}
+
+.footer-links h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Section */
+.footer-social {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.footer-social a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center; /* Untuk menempatkan ikon dan teks sejajar */
+}
+
+.footer-social a img.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+  /* Bagian paling bawah untuk informasi */
+.footer-info {
+    background-color: #059212; /* Warna hijau gelap */
+    text-align: center;
+    padding: 15px 0; /* Jarak di atas dan bawah teks */
+    width: 100vw; /* Lebar penuh viewport */
+    font-size: 14px;
+    color: white;
+    position: absolute; /* Memastikan berada di bagian paling bawah */
+    bottom: 0; /* Tetap berada di paling bawah */
+    left: 0; /* Menyentuh tepi kiri */
+    right: 0; /* Menyentuh tepi kanan */
+}  

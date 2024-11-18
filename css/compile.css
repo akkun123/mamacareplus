@@ -1,0 +1,208 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+    min-height: 100vh; /* Menutupi layar penuh */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Jika Anda ingin tetap bisa scrolling tapi tanpa scrollbar */
+body::-webkit-scrollbar {
+  width: 0; /* Scrollbar dihilangkan */
+  height: 0; /* Untuk horizontal scrollbar */
+}
+
+/* Sticky Header */
+.header {
+    background-color: #9BEC00;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar Scroll Transparan */
+.header.transparent {
+    background-color: rgba(44, 42, 42, 0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.nav-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Tombol Get Started */
+.btn-get-started {
+    background-color: #00b300;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.btn-get-started:hover {
+    background-color: #009900;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('/images/image\\ 2.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 75vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 100%;
+    color: #F5F5F5;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero-content .btn-get-started {
+    background-color: #9BEC00;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Search Bar */
+.search-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: -75px 0 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    max-width: 100%;
+    background-color: white;
+    border: 2px solid #9BEC00;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(155, 236, 0, 0.5);
+}
+
+.menu-icon {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #9BEC00;
+}
+
+.search-icon {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.search-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* About Section */
+.about {
+    padding: 30px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.separator {
+    width: 300px;
+    height: 9px;
+    background-color: #9BEC00;
+    margin: 0 auto 20px;
+    border-radius: 25px;
+}
+
+.about h2 {
+    color: #1E1E1E;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1E1E1E;
+}
