@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Page</title>
+    <link rel="stylesheet" href="datadiri.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/image 2.png" alt="Logo">
+                <span>MamaCare+</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Fitur</a></li>
+                    <li><a href="#">Article</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Notif</a></li>
+                    <li><a href="#">Profil Mama</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <img src="images/image 2.png" alt="Hero Image">
+        </div>
+    </header>
+
+    <main>
+        <img src="/images/image 2.png" alt="">
+        <div class="profile-container">
+            <!-- sidebar -->
+            <aside class="sidebar">
+                <h2>Profil</h2>
+                <ul>
+                    <li><a href="/datadiri.html">Data Diri</a></li>
+                    <li><a href="/ubahpassword.html">Ubah Password</a></li>
+                </ul>
+            </aside>
+
+            <section class="profile-content">
+                <h2>Data Diri Profil</h2>
+                <div class="profile-form">
+                    <div class="profile-photo">
+                        <img src="profile-placeholder.png" alt="Foto Profil">
+                    </div>
+                    <form action="#">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username">
+
+                        <label for="fullname">Nama Lengkap</label>
+                        <input type="text" id="fullname" name="fullname">
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+
+                        <label for="phone">No. Telp</label>
+                        <input type="tel" id="phone" name="phone">
+
+                        <label for="nik">NIK</label>
+                        <input type="text" id="nik" name="nik">
+
+                        <label for="address">Alamat</label>
+                        <textarea id="address" name="address"></textarea>
+
+                        <div class="form-actions">
+                            <button type="reset" class="cancel">Batal</button>
+                            <button type="submit" class="submit">Simpan</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
